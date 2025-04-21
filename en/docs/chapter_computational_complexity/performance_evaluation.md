@@ -18,7 +18,7 @@ There are mainly two methods of efficiency assessment: actual testing and theore
 
 Suppose we have algorithms `A` and `B`, both capable of solving the same problem, and we need to compare their efficiencies. The most direct method is to use a computer to run these two algorithms, monitor and record their runtime and memory usage. This assessment method reflects the actual situation, but it has significant limitations.
 
-On one hand, **it's difficult to eliminate interference from the testing environment**. Hardware configurations can affect algorithm performance. For example, an algorithm with a high degree of parallelism is better suited for running on multi-core CPUs, while an algorithm that involves intensive memory operations performs better with high-performance memory. The test results of an algorithm may vary across different machines. This means testing across multiple machines to calculate average efficiency becomes impractical.
+On one hand, **it is difficult to eliminate interference factors in the test environment**. Hardware configurations can affect algorithm performance. For example, an algorithm with a high degree of parallelism is better suited for running on multi-core CPUs, while an algorithm that involves intensive memory operations performs better with high-performance memory. The test results of an algorithm may vary across different machines. This means that we need to test on various machines and calculate the average efficiency, which is unrealistic.
 
 On the other hand, **conducting a full test is very resource-intensive**. Algorithm efficiency varies with input data size. For example, with smaller data volumes, algorithm `A` might run faster than `B`, but with larger data volumes, the test results may be the opposite. Therefore, to draw convincing conclusions, we need to test a wide range of input data sizes, which requires excessive computational resources.
 
@@ -30,9 +30,9 @@ Complexity analysis reflects the relationship between the time and space resourc
 
 - "Time and space resources" correspond to <u>time complexity</u> and <u>space complexity</u>, respectively.
 - "As the size of input data increases" means that complexity reflects the relationship between algorithm efficiency and the volume of input data.
-- "The trend of growth in time and space" indicates that complexity analysis focuses not on the specific values of runtime or space occupied, but on the "rate" at which time or space increases.
+- "The trend of growth in time and space" indicates that complexity analysis focuses not on the specific values of runtime or space occupied, but on the "speed" of the growth of time or space.
 
-**Complexity analysis overcomes the disadvantages of actual testing methods**, reflected in the following aspects:
+**Complexity analysis overcomes the disadvantages of actual testing methods**, which is reflected in the following aspects:
 
 - It does not require actually running the code, making it more environmentally friendly and energy efficient.
 - It is independent of the testing environment and applicable to all operating platforms.
